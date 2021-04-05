@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane prefHeight="380.0" prefWidth="600.0" style="-fx-background-color: #cac7ff;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="server.sample.ServerController">
+    <children>
+        <Button fx:id="connectdb" layoutX="205.0" layoutY="250.0" mnemonicParsing="false" onAction="#connectDB" prefHeight="35.0" prefWidth="190.0" text="Подключиться к БД" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#0106a4" height="25.0" radius="12.0" width="25.0" />
+         </effect></Button>
+        <Button fx:id="srvOff" layoutX="200.0" layoutY="308.0" mnemonicParsing="false" onAction="#stopServer" prefHeight="35.0" prefWidth="200.0" text="Остановить сервер" visible="false">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#0106a4" height="25.0" radius="12.0" width="25.0" />
+         </effect></Button>
+        <TextField fx:id="database" layoutX="40.0" layoutY="81.0" prefHeight="30.0" prefWidth="220.0" text="mobile">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#0106a4" />
+         </effect></TextField>
+        <TextField fx:id="prt" layoutX="350.0" layoutY="171.0" prefHeight="30.0" prefWidth="220.0" text="3306">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#0106a4" />
+         </effect></TextField>
+        <TextField fx:id="login" layoutX="40.0" layoutY="171.0" prefHeight="30.0" prefWidth="220.0" text="root">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#0106a4" />
+         </effect></TextField>
+        <PasswordField fx:id="psswrd" layoutX="350.0" layoutY="81.0" prefHeight="30.0" prefWidth="220.0" text="Mongo5nfynfy">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#0106a4" />
+         </effect></PasswordField>
+        <Label layoutX="100.0" layoutY="46.0" text="База данных" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold Italic" size="18.0" />
+         </font></Label>
+        <Label layoutX="95.0" layoutY="136.0" prefHeight="30.0" prefWidth="127.0" text="Пользователь" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold Italic" size="18.0" />
+         </font></Label>
+        <Label layoutX="430.0" layoutY="46.0" text="Пароль">
+         <font>
+            <Font name="Calibri Bold Italic" size="18.0" />
+         </font></Label>
+        <Button fx:id="srvOn" layoutX="210.0" layoutY="308.0" mnemonicParsing="false" onAction="#startServer" prefHeight="35.0" prefWidth="180.0" text="Включить сервер">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#0106a4" height="25.0" radius="12.0" width="25.0" />
+         </effect></Button>
+      <Label layoutX="440.0" layoutY="136.0" text="Порт">
+         <font>
+            <Font name="Calibri Bold Italic" size="18.0" />
+         </font>
+      </Label>
+    </children>
+</Pane>

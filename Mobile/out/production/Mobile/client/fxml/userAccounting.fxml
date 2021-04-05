@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: #cac7ff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.UserAccountingController">
+    <children>
+      <Button fx:id="backButton" layoutX="786.0" layoutY="452.0" mnemonicParsing="false" onAction="#back" prefWidth="100.0" text="Назад">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#0106a4" height="25.0" radius="12.0" width="25.0" />
+         </effect>
+      </Button>
+      <TableView fx:id="accountingTable" layoutX="14.0" layoutY="69.0" prefHeight="363.0" prefWidth="538.0">
+         <columns>
+            <TableColumn fx:id="idColumn" prefWidth="64.0" style="-fx-alignment: CENTER;" text="ID" />
+            <TableColumn fx:id="loginColumn" prefWidth="127.0" style="-fx-alignment: CENTER;" text="Пользователь" />
+            <TableColumn fx:id="vendercodeColumn" prefWidth="142.0" style="-fx-alignment: CENTER;" text="Код товара" />
+            <TableColumn fx:id="dateColumn" prefWidth="125.0" style="-fx-alignment: CENTER;" text="Дата продажи" />
+            <TableColumn fx:id="amountColumn" prefWidth="79.0" style="-fx-alignment: CENTER;" text="Количество" />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="44.0" prefWidth="432.0" text="Система учета продаж" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Calibri Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="589.0" layoutY="363.0" mnemonicParsing="false" onAction="#add" prefHeight="34.0" prefWidth="270.0" text="Добавить">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#0106a4" height="25.0" radius="12.0" width="25.0" />
+         </effect>
+      </Button>
+      <TextField fx:id="amount" layoutX="589.0" layoutY="303.0" prefHeight="30.0" prefWidth="270.0" promptText="Количество">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#0106a4" />
+         </effect>
+      </TextField>
+      <ChoiceBox fx:id="vendercodeBox" layoutX="590.0" layoutY="183.0" prefHeight="34.0" prefWidth="270.0">
+         <effect>
+            <InnerShadow color="#0106a4" height="25.0" radius="12.0" width="25.0" />
+         </effect>
+      </ChoiceBox>
+      <Label alignment="CENTER" layoutX="590.0" layoutY="104.0" prefHeight="51.0" prefWidth="270.0" text="Учет продукции" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Calibri Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="date" editable="false" layoutX="589.0" layoutY="243.0" prefHeight="30.0" prefWidth="270.0" promptText="Дата">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#0106a4" />
+         </effect>
+      </TextField>
+    </children>
+</AnchorPane>

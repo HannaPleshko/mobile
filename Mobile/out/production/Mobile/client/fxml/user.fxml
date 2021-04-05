@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: #cac7ff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.controllers.UserController">
+    <children>
+      <Button fx:id="backButton" layoutX="786.0" layoutY="452.0" mnemonicParsing="false" onAction="#back" prefWidth="100.0" text="Назад">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#0106a4" height="25.0" radius="12.0" width="25.0" />
+         </effect>
+      </Button>
+      <TableView fx:id="userTable" layoutX="19.0" layoutY="14.0" prefHeight="400.0" prefWidth="583.0">
+         <columns>
+            <TableColumn fx:id="nameColumn" prefWidth="103.0" style="-fx-alignment: CENTER;" text="Имя" />
+            <TableColumn fx:id="surnameColumn" prefWidth="131.0" style="-fx-alignment: CENTER;" text="Фамилия" />
+            <TableColumn fx:id="loginColumn" prefWidth="132.0" style="-fx-alignment: CENTER;" text="Логин" />
+            <TableColumn fx:id="roleColumn" prefWidth="99.0" style="-fx-alignment: CENTER;" text="Роль" />
+            <TableColumn fx:id="statusColumn" prefWidth="117.0" style="-fx-alignment: CENTER;" text="Статус" />
+         </columns>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TableView>
+      <Button fx:id="addB" layoutX="340.0" layoutY="452.0" mnemonicParsing="false" onAction="#add" prefWidth="100.0" text="Добавить">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#0106a4" height="25.0" radius="12.0" width="25.0" />
+         </effect>
+      </Button>
+      <Button fx:id="delB" layoutX="460.0" layoutY="452.0" mnemonicParsing="false" onAction="#del" prefWidth="100.0" text="Уволить">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#0106a4" height="25.0" radius="12.0" width="25.0" />
+         </effect>
+      </Button>
+      <TextField fx:id="login" layoutX="615.0" layoutY="254.0" prefHeight="30.0" prefWidth="270.0" promptText="Логин">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#0106a4" />
+         </effect>
+      </TextField>
+      <PasswordField fx:id="password" layoutX="615.0" layoutY="314.0" prefHeight="30.0" prefWidth="270.0" promptText="Пароль">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#0106a4" />
+         </effect>
+      </PasswordField>
+      <ChoiceBox fx:id="roleBox" layoutX="612.0" layoutY="380.0" prefHeight="34.0" prefWidth="270.0">
+         <effect>
+            <InnerShadow color="#0106a4" height="25.0" radius="12.0" width="25.0" />
+         </effect>
+      </ChoiceBox>
+      <Label alignment="CENTER" layoutX="613.0" layoutY="14.0" prefHeight="93.0" prefWidth="270.0" text="Добавление пользователя" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Calibri Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" layoutX="615.0" layoutY="134.0" prefHeight="30.0" prefWidth="270.0" promptText="Имя">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#0106a4" />
+         </effect>
+      </TextField>
+      <TextField fx:id="surname" layoutX="615.0" layoutY="194.0" prefHeight="30.0" prefWidth="270.0" promptText="Фамилия">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#0106a4" />
+         </effect>
+      </TextField>
+    </children>
+</AnchorPane>
